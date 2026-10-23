@@ -50,6 +50,13 @@ p { margin: 0; }
 }
 .skip:focus { top: 12px; }
 
+/* Preview-only banner (delete with the banner in index.html) */
+.preview-banner {
+  background: var(--warn); color: #1a1406;
+  padding: 10px 24px; text-align: center; font-size: 14px; line-height: 1.4;
+}
+.preview-banner a { color: #1a1406; font-weight: 700; }
+
 /* Buttons */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;

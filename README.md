@@ -1,45 +1,81 @@
-# DVR Doctor — rebuilt landing page
+# DVR Doctor homepage: a redesign idea
 
-Drop-in replacement for the homepage at dvrdoctor.com. Plain HTML/CSS/JS, no build step.
+Hi okyproxd and foxyonfireyt! 👋
+
+I saw you on Chase Momo's channel and really like DVR Doctor. I work on websites, so I made a
+version of your homepage that I think could help more visitors buy a key. It uses your own
+footage, prices and wording.
+
+**Live preview:** https://markpapdev-cloud.github.io/dvrdoctor-landing/
+
+It's yours to use however you like: copy the whole thing, take one section, or ignore it.
+No need to credit me. Nothing here is on your real site.
+
+## The 6 biggest changes, and why
+
+1. **Your reviews and guarantee are now on the homepage.** Your Gumroad page has 28 five-star
+   ratings, a 14-day money-back guarantee and a shout-out to Chase Momo, but your site didn't
+   show any of that. People trust a $5 download from a new app much more when they can see
+   other pilots liked it and that they can get a refund.
+
+2. **The headline says what it fixes.** "FPV DVR Cleanup for everything and anything FPV" is now
+   "Make analog DVR look like you flew digital", followed by the exact glitches it removes
+   (rainbow streaks, color tears, HDZero breakup).
+
+3. **Each price has its own buy button.** Before, people picked Standard or Pro on your site, then
+   had to pick again on Gumroad. Now "Get Standard" and "Get Pro" are separate buttons. To finish
+   this, swap in each version's own Gumroad checkout link (see the to-do list below).
+
+4. **Phone visitors get something that works.** Lots of people find you from YouTube on their
+   phone, but "Try it free" downloads a computer app and "Clean online" needs a Pro key. Now
+   there's an "Email yourself the download link" box, so they can try it later on their computer.
+
+5. **The Windows and Mac warnings are explained up front.** Since the app isn't signed yet,
+   Windows and macOS show a scary warning the first time. A short "heads-up" box tells people what
+   to click before they see it, so they don't think something is wrong.
+
+6. **Less to scroll past.** The Kickstarter button that didn't go anywhere yet, the "Another tool:
+   nothing to announce yet" card and some extra menu links are gone, so the page goes straight
+   from "what it does" to "proof" to "price".
+
+It also loads faster on phones (smaller images) and passes an accessibility check, which makes
+it easier to read and use with a keyboard or screen reader.
+
+## If you use it: quick to-do list
+
+Search `index.html` for `TODO` and `PREVIEW ONLY` to find each spot.
+
+- [ ] Delete the yellow "Unofficial redesign" banner and the `noindex` line (both marked `PREVIEW ONLY`).
+- [ ] Put each version's direct Gumroad checkout link on the "Get Standard" and "Get Pro" buttons.
+- [ ] Link "As featured by Chase Momo" to the video.
+- [ ] In the FAQ, say how someone asks for a refund.
+- [ ] Check the before/after pictures are real app output (your old site's image descriptions said "Illustration").
+- [ ] Optional: make your Gumroad page match the site (same name and logo), and change the Pro
+      description to say the highlights extractor is "coming soon".
+
+---
+
+## Technical notes
+
+Plain HTML/CSS/JS like your current site, so no build step is needed.
 
 ```
-index.html   page
-styles.css  styles
-app.js      before/after sliders, example tabs, "email me the link", click tracking
-media/      before/after frames (originals + 720/1080 px sizes)
-assets/     icon.png, logo-dark-sm.png
+index.html   the page
+styles.css   styles
+app.js       before/after sliders, example tabs, "email me the link", click tracking
+media/       your before/after frames (originals plus smaller 720/1080 px copies for phones)
+assets/      icon.png, logo-dark-sm.png (smaller copy of your logo)
 ```
 
-## Deploying
+To use it, copy these files over your current homepage files. The Download and Clean online
+links point to your existing `releases.html` and `/web/` pages, so they only work on
+dvrdoctor.com, not in the preview.
 
-Copy these files over the current homepage files. `releases.html` and `/web/` are linked as
-they are today, so those pages stay as they are. Keep `media/` filenames: the originals
-are the same files the live site already serves.
+**Click tracking (optional):** each main button has a `data-track` name such as `hero_buy`,
+`buy_pro` or `download_windows`. If you turn on Cloudflare Zaraz for your site, `app.js` sends
+those clicks there, so you can see which buttons people use. If you don't, it does nothing.
 
-## Before it goes live (TODOs in index.html)
-
-1. **Gumroad tier links.** Both price buttons point at the product page with a UTM tag.
-   Replace each with that variant's direct checkout link so buyers don't pick the tier twice.
-2. **Chase Momo.** "As featured by Chase Momo" is plain text; link it to the video.
-3. **Refunds.** The FAQ promises the 14-day money-back guarantee shown on Gumroad.
-   Add how to claim it.
-4. **Example frames.** Confirm the after images are unedited app output. Their alt text on the
-   old site said "Illustration".
-5. **SmartScreen screenshot.** Optional: add an image of the warning box to the heads-up panel.
-6. **Gumroad listing.** Rename the store and logo to DVR Doctor, and change the Pro line to say
-   the highlights extractor is coming (the page now says "free when it ships").
-
-## Tracking
-
-Every CTA has a `data-track` name (`hero_buy`, `buy_standard`, `buy_pro`, `download_windows`, ...).
-`app.js` sends them to Cloudflare Zaraz (`zaraz.track`) when Zaraz is turned on for the zone;
-otherwise it does nothing. Turn on Zaraz (Cloudflare dashboard → Zaraz) to see which
-buttons get clicked. Gumroad links carry `utm_source=dvrdoctor.com&utm_content=<placement>`.
-
-## Checked locally (2026-10-23)
-
-- No horizontal scroll at 375 px, no console errors, no broken images.
-- axe-core 4.10.2 (WCAG 2.2 AA): 0 violations.
-- Lighthouse 12.2.1 mobile: performance 0.84, accessibility 1.0, LCP 3.4 s, TBT 0 ms, CLS 0
-  (live site: 0.57 / 0.96, LCP 4.9 s, TBT 720 ms). Served from a local Python server with no
-  compression or cache headers; Cloudflare adds those in production.
+**Checked on 2026-10-23 (local copy):**
+- No sideways scrolling on a 375 px phone, no console errors, no broken images.
+- axe-core accessibility check: 0 problems.
+- Lighthouse on mobile: speed score 0.84, accessibility 1.0. Your current site scores 0.57 and 0.96.
