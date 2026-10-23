@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0c">
+<title>DVR Doctor | Fix rainbow streaks in analog FPV DVR footage</title>
+<meta name="description" content="DVR Doctor removes rainbow streaks, color tears and HDZero breakup from FPV DVR recordings on Windows and Mac. From $4.99 one-time, 14-day money-back guarantee.">
+<meta property="og:title" content="DVR Doctor: make analog DVR look like you flew digital">
+<meta property="og:description" content="Removes rainbow streaks, color tears and HDZero breakup from footage you've already recorded. Windows and Mac, from $4.99.">
+<meta property="og:image" content="https://dvrdoctor.com/media/hero_after.webp">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="media/hero_before-720.webp" imagesrcset="media/hero_before-720.webp 720w, media/hero_before-1080.webp 1080w, media/hero_before.webp 1440w" imagesizes="(max-width: 1040px) 100vw, 560px" fetchpriority="high">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <nav class="wrap nav-row" aria-label="Main">
+    <a class="brand" href="/">
+      <img class="logo" src="assets/logo-dark-sm.png" alt="" width="42" height="28">
+      <span>DVR Doctor</span>
+    </a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download">Download</a>
+      <a class="btn btn-light btn-sm" href="#pricing" data-track="nav_get_key">Get a key</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <p class="eyebrow">For analog and HDZero DVR · Windows and Mac</p>
+      <h1>Make analog DVR look like you flew digital.</h1>
+      <p class="lead">DVR Doctor removes rainbow streaks, color tears and HDZero breakup from footage you've already recorded. It rebuilds each broken frame from the frames around it, and keeps your audio.</p>
+      <div class="cta-row">
+        <a class="btn btn-accent btn-lg" href="#pricing" data-track="hero_buy">
+          Clean my footage — $4.99
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#download" data-track="hero_try_free">Try it free on my clip</a>
+      </div>
+      <ul class="proof" aria-label="Why people trust it">
+        <li>
+          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <span><strong>5.0</strong> from 28 buyers</span>
+        </li>
+        <li>
+          <svg class="ico ico-ok" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          14-day money-back guarantee
+        </li>
+        <!-- TODO: link this to the Chase Momo video once you have the URL -->
+        <li>As featured by Chase Momo</li>
+      </ul>
+    </div>
+
+    <figure class="compare-block">
+      <div class="compare" data-compare style="--pos: 50%">
+        <img class="compare-before" src="media/hero_before-720.webp"
+             srcset="media/hero_before-720.webp 720w, media/hero_before-1080.webp 1080w, media/hero_before.webp 1440w"
+             sizes="(max-width: 1040px) 100vw, 560px" width="1440" height="960" fetchpriority="high"
+             alt="Analog DVR frame with rainbow streaks and color tears across the trees">
+        <img class="compare-after" src="media/hero_after-720.webp"
+             srcset="media/hero_after-720.webp 720w, media/hero_after-1080.webp 1080w, media/hero_after.webp 1440w"
+             sizes="(max-width: 1040px) 100vw, 560px" width="1440" height="960"
+             alt="The same frame after DVR Doctor, with the streaks removed">
+        <span class="compare-line" aria-hidden="true"></span>
+        <span class="tag tag-left">Cleaned</span>
+        <span class="tag tag-right">Original DVR</span>
+      </div>
+      <label class="compare-control">
+        <span>Drag to compare</span>
+        <input type="range" min="0" max="100" value="50" data-compare-range aria-label="Before and after comparison, percent cleaned shown">
+      </label>
+    </figure>
+  </section>
+
+  <section class="ticks" aria-label="What you get">
+    <ul class="wrap">
+      <li><svg class="ico ico-ok" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Pay once, no subscription</li>
+      <li><svg class="ico ico-ok" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Keeps the audio</li>
+      <li><svg class="ico ico-ok" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Free updates through the app</li>
+      <li><svg class="ico ico-ok" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Any resolution or aspect ratio</li>
+    </ul>
+  </section>
+
+  <!-- What it fixes -->
+  <section id="how" class="wrap section">
+    <div class="section-head">
+      <p class="eyebrow">What it fixes</p>
+      <h2>The glitches that ruin a good flight.</h2>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <h3>Rainbow streaks and color tears</h3>
+        <p>The Machine learning engine rebuilds each frame from its neighbours, so the streak disappears instead of being blurred over.</p>
+      </article>
+      <article class="card">
+        <h3>HDZero breakup</h3>
+        <p>Finds the scrambled 8×8 blocks and bands when the signal drops and rebuilds them from nearby frames. Your OSD stays as it is.</p>
+      </article>
+      <article class="card">
+        <h3>Flicker, on any computer</h3>
+        <p>Runs on your graphics chip or all CPU cores. On an older laptop, the Manual engine gives you sliders and profiles instead.</p>
+      </article>
+    </div>
+
+    <div class="examples">
+      <div class="tabs" role="group" aria-label="Choose an example">
+        <button type="button" class="tab" aria-pressed="true" data-example="1">Example 1</button>
+        <button type="button" class="tab" aria-pressed="false" data-example="2">Example 2</button>
+        <button type="button" class="tab" aria-pressed="false" data-example="3">Example 3</button>
+      </div>
+      <figure class="compare-block">
+        <div class="compare" data-compare data-examples style="--pos: 50%">
+          <img class="compare-before" src="media/before_1-720.webp" srcset="media/before_1-720.webp 720w, media/before_1.webp 1080w" sizes="(max-width: 928px) 100vw, 880px" width="1080" height="720" loading="lazy"
+               alt="Original DVR frame with color streaks">
+          <img class="compare-after" src="media/after_1-720.webp" srcset="media/after_1-720.webp 720w, media/after_1.webp 1080w" sizes="(max-width: 928px) 100vw, 880px" width="1080" height="720" loading="lazy"
+               alt="The same frame after DVR Doctor">
+          <span class="compare-line" aria-hidden="true"></span>
+          <span class="tag tag-left">Cleaned</span>
+          <span class="tag tag-right">Original DVR</span>
+        </div>
+        <label class="compare-control">
+          <span>Drag to compare</span>
+          <input type="range" min="0" max="100" value="50" data-compare-range aria-label="Before and after comparison, percent cleaned shown">
+        </label>
+        <!-- TODO: confirm these are unedited app output and name the engine/settings used -->
+        <figcaption>Real analog DVR frames, cleaned with DVR Doctor.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap steps" aria-label="How it works">
+    <div class="step">
+      <span class="step-num">1</span>
+      <h3>Drop in your DVR file</h3>
+      <p>Video or a single still, straight from your goggles' SD card.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <h3>Pick an engine</h3>
+      <p>Machine learning for the best result, Manual for slower computers.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <h3>Export and post</h3>
+      <p>Same length, same audio, ready for YouTube or your group chat.</p>
+    </div>
+  </section>
+
+  <!-- Reviews (quotes from the Gumroad listing) -->
+  <section id="reviews" class="band">
+    <div class="wrap section">
+      <div class="section-head">
+        <p class="eyebrow">From pilots who bought it</p>
+        <h2>5.0 from 28 ratings.</h2>
+      </div>
+      <div class="cards">
+        <blockquote class="card quote">
+          <p>“I just tried it on a full length edited video I made months ago and it came out much cleaner and way more crisp than I thought!”</p>
+          <footer>Gumroad buyer, Italy</footer>
+        </blockquote>
+        <blockquote class="card quote">
+          <p>“I tested it and it works extremely well.”</p>
+          <footer>hetah, Gumroad</footer>
+        </blockquote>
+        <blockquote class="card quote">
+          <p>“I’m into FPV since 6 years now, what you’ve done is awesome for the community.”</p>
+          <footer>Gumroad buyer</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="wrap section">
+    <div class="section-head center">
+      <p class="eyebrow">Pricing</p>
+      <h2>Pay once. Keep it.</h2>
+      <p class="sub">One key per computer. Reinstalls and updates are free.</p>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <h3>Standard</h3>
+        <p class="price"><span>$4.99</span> one-time</p>
+        <ul class="list">
+          <li>Analog and HDZero cleaning</li>
+          <li>Machine learning and Manual engines</li>
+          <li>Full-length, full-size exports</li>
+        </ul>
+        <!-- TODO: replace with the Standard variant's direct checkout link -->
+        <a class="btn btn-outline btn-block" href="https://6536849051670.gumroad.com/l/dvr-doctor?utm_source=dvrdoctor.com&utm_content=pricing-standard" data-track="buy_standard">Get Standard — $4.99</a>
+      </article>
+      <article class="plan plan-pro">
+        <span class="badge">Recommended</span>
+        <h3>Pro</h3>
+        <p class="price"><span>$7.99</span> one-time</p>
+        <ul class="list">
+          <li>Everything in Standard</li>
+          <li>OSD removal: remove, move or add OSD text</li>
+          <li>2× AI upscaling</li>
+          <li>Online cleaner on any phone or browser</li>
+          <li class="soon">Highlights extractor, free when it ships</li>
+        </ul>
+        <!-- TODO: replace with the Pro variant's direct checkout link -->
+        <a class="btn btn-accent btn-block" href="https://6536849051670.gumroad.com/l/dvr-doctor?utm_source=dvrdoctor.com&utm_content=pricing-pro" data-track="buy_pro">Get Pro — $7.99</a>
+      </article>
+    </div>
+    <ul class="plan-notes">
+      <li><svg class="ico ico-ok" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>14-day money-back guarantee</li>
+      <li>Tax shown before you pay</li>
+      <li>Key arrives on screen and by email</li>
+    </ul>
+  </section>
+
+  <!-- Try free / download -->
+  <section id="download" class="wrap section-tight">
+    <div class="panel">
+      <div class="panel-main">
+        <h2>Try it on your own clip first.</h2>
+        <p class="sub">The free trial cleans the first 30 seconds of any clip and saves it at 720×480 with a watermark. No key, no card.</p>
+        <div class="cta-row">
+          <a class="btn btn-light" href="releases.html" data-track="download_windows">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+            Windows 10 / 11
+          </a>
+          <a class="btn btn-ghost" href="releases.html" data-track="download_mac">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+            Mac, Apple Silicon
+          </a>
+        </div>
+        <form class="send-link" data-send-link>
+          <label for="sendEmail">On your phone? Email yourself the download link.</label>
+          <div class="send-row">
+            <input id="sendEmail" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+            <button class="btn btn-light" type="submit" data-track="send_link">Send link</button>
+          </div>
+          <p class="hint">Opens your mail app with the link filled in. We don't store your address.</p>
+        </form>
+      </div>
+      <aside class="panel-side" aria-labelledby="headsUp">
+        <p id="headsUp" class="eyebrow eyebrow-warn">Heads-up on first launch</p>
+        <!-- TODO: add a screenshot of the SmartScreen box with "More info" and "Run anyway" circled -->
+        <p>We haven't bought signing certificates yet, so Windows and macOS warn you once.</p>
+        <p><strong>Windows:</strong> click More info → Run anyway.</p>
+        <p><strong>Mac:</strong> open System Settings → Privacy &amp; Security → Open Anyway, then enter your password.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="wrap narrow section-tight">
+    <h2>Questions</h2>
+    <div class="faq">
+      <details id="refunds">
+        <summary>What if it doesn't work on my footage?</summary>
+        <!-- TODO: say exactly how to claim a refund -->
+        <p>Try the free version on your own clip first. If you're still not happy after buying, you get a full refund within 14 days of purchase.</p>
+      </details>
+      <details>
+        <summary>What counts as one computer?</summary>
+        <p>Your key binds to the first computer you activate it on and keeps working there through reinstalls and updates. To move it, open DVR Doctor on the old computer and choose Menu → Change license key. Old computer gone? Message us on Discord and we'll move it.</p>
+      </details>
+      <details>
+        <summary>Does my key expire?</summary>
+        <p>Activate it within 30 days of buying, then it's yours for good, even when you move computers.</p>
+      </details>
+      <details>
+        <summary>What's in Pro?</summary>
+        <p>Everything in Standard, plus OSD removal (remove, move or add on-screen display text), 2× AI upscaling and the online cleaner. The highlights extractor will be added free when it's out. If you bought before Pro existed, your key already counts as Pro.</p>
+      </details>
+      <details>
+        <summary>Do I get charged tax?</summary>
+        <p>Depending on where you live, the store may add VAT or sales tax at checkout. It shows you the total before you pay.</p>
+      </details>
+      <details>
+        <summary>Which files does it take?</summary>
+        <p>Analog and HDZero DVR recordings at any aspect ratio and resolution, plus single stills.</p>
+      </details>
+      <details>
+        <summary>Does it run on a Mac?</summary>
+        <p>Yes, on Apple Silicon Macs (M1 or newer) with macOS 13.4 or later.</p>
+      </details>
+      <details>
+        <summary>Can I clean clips on my phone?</summary>
+        <p>Yes, with a Pro key. The <a href="/web/">online cleaner</a> runs in your browser and handles analog clips up to 30 seconds at 540p. The video never leaves your device.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Makers + final CTA -->
+  <section class="final">
+    <div class="wrap final-inner">
+      <p class="makers">Made by two FPV pilots, <strong>okyproxd</strong> and <strong>foxyonfireyt</strong>. Bugs and requests go straight to us on <a href="https://discord.gg/rsDGy7EQsS">Discord</a>.</p>
+      <h2>Your next flight deserves better than streaks.</h2>
+      <div class="cta-row center">
+        <a class="btn btn-accent btn-lg" href="#pricing" data-track="final_buy">Clean my footage — $4.99</a>
+        <a class="btn btn-ghost btn-lg" href="#download" data-track="final_try_free">Try it free</a>
+      </div>
+      <p class="fine">14-day money-back guarantee · One-time payment</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <span>© 2026 DVR Doctor</span>
+    <nav aria-label="Footer">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="releases.html">Download</a>
+      <a href="/web/">Clean online</a>
+      <a href="https://discord.gg/rsDGy7EQsS">Discord</a>
+      <a href="#refunds">Refunds</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://gumroad.com/js/gumroad.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
